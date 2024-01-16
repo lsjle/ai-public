@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Predict</title>
+</head>
+<main>
+    <form action="/proceed" method="post">
+        <fieldset>
+            <legend>fill it stop complaining it</legend>
+        <input type="radio" id="male" value="1" name="gender" required>
+        <label for="male">Male</label>
+        <input type="radio" id="female" value="0" name="gender"required>
+        <label for="female">female</label>
+        <br>
+        Married?
+        <input type="radio" id="marrieds" value="1" name="married"required>
+        <label for="marrieds">yes</label>
+        <input type="radio" id="single" value="0" name="married"required>
+        <label for="single">no</label>
+        <br>
+        Num of dependents:<input type="number" name="dependents"required>
+        <br>
+        <label for="education">Education:</label>
+        <select id="education" name="education"required>
+            <option value="1">Graduate</option>
+            <option value="0">Not Graduate</option>
+        </select>
+        <br>
+        Self employed?
+        <input type="radio" id="selfem" value="1" name="selfemp"required>
+        <label for="selfem">Yes</label>
+        <input type="radio" id="noselfem" value="0" name="selfemp"required>
+        <label for="noselfem">No</label>
+        <br>
+        <label for="education">Property area:</label>
+        <select id="pa" name="pa"required>
+            <option value="2">Urban</option>
+            <option value="1">Semiurban</option>
+            <option value="0">Rural</option>
+        </select>
+    </fieldset>
+        <input type="submit">
+    </form>
+</main>
