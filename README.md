@@ -165,3 +165,21 @@ def replace_letters_with_numbers(input_list):
     return result_list
 ```
 This code can categorize the letter we will be used in the future.
+# 12/28
+```python
+keras.mixed_precision.set_global_policy("float32")
+preprocessor = keras_nlp.models.GPT2CausalLMPreprocessor.from_preset(
+    "gpt2_base_en",
+    sequence_length=128,
+)
+gpt2_lm = keras_nlp.models.GPT2CausalLM.from_preset(
+    "gpt2_base_en", preprocessor=preprocessor
+)
+```
+This code will load GPT-2 model given by keras_nlp.
+The reason to set precision policy to f32 aka float32, is to ensure the accuracy and performance. This code is orginally from keras offical document about machine learning.
+```python
+with open("usc.txt", 'r', encoding='utf-8') as file:
+    paragraphs=[file.read()]
+```
+We will use United State Code aka USC as our train data. The dataset is not provided to public, however it can be found online easily.
